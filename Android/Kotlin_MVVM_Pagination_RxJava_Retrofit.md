@@ -17,21 +17,25 @@
   + 사용자가 보고 터치하는 화면. Activity, Fragment 등.
   + 네트워크나 Local에서 데이터를 요청하는 행위 등과 같은 Business Logic에 대한 구현은 하지 않는다.
   + 오직 <span style="color:DarkSeaGreen">ViewModel</span> 로 부터 얻은 것 만을 화면에 보여준다.
+
 <br>
+
 - **<span style="color:DarkSeaGreen">ViewModel</span>**
   + <span style="color:LightSlateGrey">View</span> 를 위한 data를, repository를 통해 제공한다.
   + <span style="color:DarkSeaGreen">ViewModel</span> 은 <span style="color:LightSlateGrey">View</span> 에 대한 어떠한 정보도 가지지 않는다.
   + 따라서 <span style="color:DarkSeaGreen">ViewModel</span> 에서는 적절한 data를 observable하도록 한다.
   + <span style="color:DarkSeaGreen">ViewModel</span> 에 LiveData 들이 있으면 <span style="color:LightSlateGrey">View</span> 는 그것들을 관찰한다.
   + Data가 바뀌면 변경된 data를 관찰하고 있던 <span style="color:LightSlateGrey">View</span> 는 그 변화를 인지한다.
+
 <br>
-- **<span style="color:Plum">Model</span>** :
+
+- **<span style="color:Plum">Model</span>**
   + <span style="color:DarkSeaGreen">ViewModel</span> 과 <span style="color:Plum">Model</span> 사이에 Repository가 존재한다.
   + Repository에 Local 또는 네트워크에 있는 data를 fetch한다.
   + Repository는 Local과 네트워크 사이의 중재 역할을 한다.
   + <span style="color:DarkSeaGreen">ViewModel</span> 에서 Repository에 fetch된 데이터를 받아온다.
 
-
+<br>
 
 ### Dependency 추가하기
 
@@ -60,6 +64,8 @@ implementation 'androidx.paging:paging-runtime:2.1.1'
 implementation 'io.reactivex.rxjava2:rxjava:2.2.7'
 implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
 ```
+
+<br>
 
 ### SingleMovieActivity UI 작업
 
@@ -287,6 +293,7 @@ implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
 
     </details>
 
+<br>
 
 ### 네트워크 연결 상태 확인을 위한 NetworkState 클래스 추가
 
@@ -314,6 +321,7 @@ class NetworkState(val status: Status, val msg: String) {
 
 </details>
 
+<br>
 
 ### MovieDetails data class 추가
 
@@ -354,7 +362,7 @@ class NetworkState(val status: Status, val msg: String) {
 
   </details>
 
-
+<br>
 
 ### Retrofit을 이용한 네트워크 통신
 
@@ -462,6 +470,7 @@ class NetworkState(val status: Status, val msg: String) {
 
 - `okHttpClient`에서의 `connectTimeout()`을 이용해 요청을 시작한 후 서버와의 TCP handshake가 완료되기까지 지속되는 시간을 설정할 수 있다. 제한 시간 내에 서버에 연결할 수 없는 경우 해당 요청을 실패한 것으로 처리한다.
 
+<br>
 
 ### RxJava를 이용해 API로 부터 data를 받아온 뒤 Repository에 fetch하기
 
@@ -603,6 +612,7 @@ class SingleMovieViewModel(private val movieRepository: MovieDetailsRepository, 
 - Activity나 Fragment가 destroy될 때, **memory leak** 을 방지하기 위해 `onCleared()` 메서드를 오버라이드 하여 `compositeDisposable`을 dispose(처분) 해준다.
 
 
+<br>
 
 <br>
 
