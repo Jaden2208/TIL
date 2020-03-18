@@ -1,5 +1,4 @@
-# Movie App Project 를 통한
-## MVVM, Pagination, RxJava, Retrofit 학습
+# Movie App Project 를 통한 <br> MVVM, Pagination, RxJava, Retrofit 학습
 
 
 ### Index
