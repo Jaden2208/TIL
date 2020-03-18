@@ -2,8 +2,8 @@
 
 
 ### 목차
-- [Android](#android)
+**- [Android](#android)**
 
 
 ### Android
-- [RxJava2](#android)
+- [Movie App Project 를 통한 MVVM, Pagination, RxJava, Retrofit 학습](#android)
