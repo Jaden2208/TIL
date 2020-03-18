@@ -2,7 +2,7 @@
 
 
 #### 목차
-> - [Android](#android)
+- [Android](#android)
 
 
 
