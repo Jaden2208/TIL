@@ -4,25 +4,21 @@
  👉 [MovieAppMVVM](https://github.com/Jaden2208/MovieAppMVVM)
 
 ### Index
-> **Step 0**
->
+**Step 0**
 > [0. MVVM Architecture](#0-mvvm-architecture)
->
-> **Step 1**
->
+
+**Step 1**
 > [1. Dependency와 Permission 추가하기](#1-dependency와-permission-추가하기)
->
-> **Step 2 : SingleMovieDetails**
->
+
+**Step 2 : SingleMovieDetails**
 > [2. SingleMovieActivity UI 작업](#2-singlemovieactivity-ui-작업)
 > [3. 네트워크 연결 상태 확인을 위한 NetworkState 클래스 추가](#3-네트워크-연결-상태-확인을-위한-networkstate-클래스-추가)
 > [4. MovieDetails data class 추가](#4-moviedetails-data-class-추가)
 > [5. Retrofit을 이용한 네트워크 통신](#5-retrofit을-이용한-네트워크-통신)
 > [6. RxJava를 이용해 API로 부터 data를 받아온 뒤 Repository에 fetch하기](#6-rxjava를-이용해-api로-부터-data를-받아온-뒤-repository에-fetch하기)
 > [7. 받아온 데이터들을 SingleMovieActivity에서 보여주기(관찰하기)](#7-받아온-데이터들을-singlemovieactivity에서-보여주기관찰하기)
->
-> **Step 3 : PopularMovies**
->
+
+**Step 3 : PopularMovies**
 > [8. Popular Movie UI 작업](#8-popular-movie-ui-작업)
 > [9. Pagination 구현을 위한 PageKeyedDataSource 만들기](#9-pagination-구현을-위한-pagekeyeddatasource-만들기)
 > [10. MovieDataSourceFactory와 Repository 추가하기 + ViewModel](#10-moviedatasourcefactory와-repository-추가하기-viewmodel)
