@@ -1,11 +1,11 @@
 # Movie App Project 를 통한 <br> MVVM, Pagination, RxJava, Retrofit 학습
 
-### 완성된 프로젝트 링크
- 👉 [MovieAppMVVM](https://github.com/Jaden2208/MovieAppMVVM)
-
-
-### Index
-
+> ### 📌 완성된 프로젝트 링크
+> 👉 [MovieAppMVVM](https://github.com/Jaden2208/MovieAppMVVM)
+> <br>
+>
+> ### 📌 Index
+>
 >**Step 0**
 >  - [0. MVVM Architecture](#0-mvvm-architecture)
 >
