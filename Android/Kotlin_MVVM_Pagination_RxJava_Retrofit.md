@@ -412,8 +412,8 @@ class NetworkState(val status: Status, val msg: String) {
 
   interface TheMovieDBInterface {
 
-      // https://api.themoviedb.org/3/movie/popular?api_key=3a1721be25cfab49572c0fa487fa4258
-      // https://api.themoviedb.org/3/movie/454626?api_key=3a1721be25cfab49572c0fa487fa4258
+      // https://api.themoviedb.org/3/movie/popular?api_key={token}
+      // https://api.themoviedb.org/3/movie/454626?api_key={token}
       // https://api.themoviedb.org/3/
 
       @GET("movie/{movie_id}")
@@ -451,8 +451,8 @@ class NetworkState(val status: Status, val msg: String) {
 
   const val POSTER_BASE_URL = "https://image.tmdb.org/t/p/w342"
 
-  // https://api.themoviedb.org/3/movie/popular?api_key=3a1721be25cfab49572c0fa487fa4258&page=1
-  // https://api.themoviedb.org/3/movie/454626?api_key=3a1721be25cfab49572c0fa487fa4258
+  // https://api.themoviedb.org/3/movie/popular?api_key={token}&page=1
+  // https://api.themoviedb.org/3/movie/454626?api_key={token}
   // https://image.tmdb.org/t/p/w342//aQvJ5WPzZgYVDrxLX4R6cLJCEaQ.jpg
 
   object TheMovieDBClient {
