@@ -13,3 +13,4 @@
 - [더블 탭으로 인해서 같은 화면이 두번 켜지는 경우?](https://github.com/Jaden2208/TIL/blob/master/Android/block_double_taps.md)
 - [Glide 효율적으로 활용하는 법](https://github.com/Jaden2208/TIL/blob/master/Android/best_strategy_to_load_images_using_glide.md)
 - [로그로 해시 키 값 추출하기](https://github.com/Jaden2208/TIL/blob/master/Android/get_hash_key_by_log.md)
+- [BootstrapMethodError: Exception from call site #0 bootstrap method 해결 방법](https://github.com/Jaden2208/TIL/blob/master/Android/bootstrapmethoderror.md)
