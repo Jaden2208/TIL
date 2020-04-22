@@ -7,21 +7,34 @@
 해시 키를 구하는 코드는 아래와 같다.
 
 ```kotlin
-private fun printHashKey(){
-  try {
-    val info = packageManager.getPackageInfo(packageName, PackageManager.GET_SIGNING_CERTIFICATES)
-    val signatures = info.signingInfo.apkContentsSigners
-    val md = MessageDigest.getInstance("SHA")
-    for (signature in signatures) {
-      val md: MessageDigest
-      md = MessageDigest.getInstance("SHA")
-      md.update(signature.toByteArray())
-      val key = String(Base64.encode(md.digest(), 0))
-      Log.d("ㅏㅏㅏHash key:", "ㅋㅋㅋ${key}ㅋㅋㅋ")
+...
+import android.content.pm.PackageManager
+import android.util.Base64
+import android.util.Log
+import java.security.MessageDigest
+...
 
+class GetHash : AppCompatActivity() {
+
+  ...
+
+  private fun printHashKey(){
+    try {
+      val info = packageManager.getPackageInfo(packageName, PackageManager.GET_SIGNING_CERTIFICATES)
+      val signatures = info.signingInfo.apkContentsSigners
+      val md = MessageDigest.getInstance("SHA")
+      for (signature in signatures) {
+        val md: MessageDigest
+        md = MessageDigest.getInstance("SHA")
+        md.update(signature.toByteArray())
+        val key = String(Base64.encode(md.digest(), 0))
+        Log.d("ㅏㅏㅏHash key:", "ㅋㅋㅋ${key}ㅋㅋㅋ")
+
+      }
+    } catch(e: Exception) {
+        Log.e("ㅏㅏㅏname not found", e.toString())
     }
-  } catch(e: Exception) {
-      Log.e("ㅏㅏㅏname not found", e.toString())
   }
 }
+
 ```
