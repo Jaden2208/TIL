@@ -21,10 +21,10 @@
 
 > 특징
 
-1. 2개 이상의 Activity를 동시에 Display할 수 없다.
-2. 1개 이상의 View 또는 ViewGroup을 포함한다.
-3. 어플리케이션에는 하나 이상의 Activity가 있어야 한다.
-4. Activity 내에 1개 이상의 Fragment를 추가할 수 있다.
+- 2개 이상의 Activity를 동시에 Display할 수 없다.
+- 1개 이상의 View 또는 ViewGroup을 포함한다.
+- 어플리케이션에는 하나 이상의 Activity가 있어야 한다.
+- Activity 내에 1개 이상의 Fragment를 추가할 수 있다.
 
 [:arrow_heading_up:](#안드로이드-4대-컴포넌트)
 
@@ -35,10 +35,10 @@
 
 > 특징
 
-1. 보이지 않는 곳에서 작업을 처리한다고 해서 Worker Thread에서 동작하는 것이 아니라 Main Thread에서 동작하며,
+- 보이지 않는 곳에서 작업을 처리한다고 해서 Worker Thread에서 동작하는 것이 아니라 Main Thread에서 동작하며,
 서비스 내에서 별도의 Thread를 생성하여 작업을 처리한다.
-2. 네트워크와 연동이 가능하다.
-3. 앱이 종료돼도 이미 시작된 Service는 백그라운드에서 계속 동작한다.
+- 네트워크와 연동이 가능하다.
+- 앱이 종료돼도 이미 시작된 Service는 백그라운드에서 계속 동작한다.
 
 [:arrow_heading_up:](#안드로이드-4대-컴포넌트)
 
