@@ -1,10 +1,19 @@
 # TIL : Today I Learned
 
-
-### 목차
+### :notebook_with_decorative_cover: Index
+**- [For Technical Interview](#for_techincal_interview)**
 **- [Android](#android)**
 
 <br>
+
+---
+
+### For Technical Interview
+- [안드로이드 개발 직무 기술 면접을 위한 정리 노트](https://github.com/Jaden2208/TIL/blob/master/TechnicalInterview/android.md)
+
+<br>
+
+---
 
 ### Android
 - [Movie App Project 를 통한 MVVM, Pagination, RxJava, Retrofit 학습](https://github.com/Jaden2208/TIL/blob/master/Android/Kotlin_MVVM_Pagination_RxJava_Retrofit.md)
