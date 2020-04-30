@@ -2,7 +2,7 @@
 
 ### :notebook_with_decorative_cover: Index
 
-**- [For Technical Interview](#for_technical_interview)**  
+**- [For Technical Interview](#for-technical-interview)**  
 **- [Android](#android)**
 
 <br>
