@@ -128,9 +128,15 @@ Android OS로 부터 발생하는 각종 이벤트와 정보를 받아와 핸들
 - `<manifest>`: 패키지명, 앱 버전 코드, 앱 버전 이름을 정의한다.  
 - `<uses-permission>`: 앱에서 필요한 권한을 정의한다.  
 - `<application>`: 앱 아이콘, 앱 이름을 정의한다.  
-- `<activity>`: 액티비티의 클래스명, 이름을 정의한다. 하위에 <intent-filter> 태그를 이용해 액티비티에 대한 인텐트 작업 시 필요한 action 과 category를 정의한다.  
+- `<activity>`: 액티비티의 클래스명, 이름을 정의한다. 하위에 `<intent-filter>` 태그를 이용해 액티비티에 대한 인텐트 작업 시 필요한 action 과 category를 정의한다.  
 - `<service>`, `<receiver>`, `<provider>`: 각각 서비스, 리시버, 프로바이더에 대한 내용을 정의한다.  
-- 그 밖에 최소 안드로이드 SDK 버전을 지정하는 <uses-sdk>와 다른 패키지를 등록할 수 있는 <uses-library> 태그 등이 존재한다.
+- 그 밖에 최소 안드로이드 SDK 버전을 지정하는 `<uses-sdk>`와 다른 패키지를 등록할 수 있는 `<uses-library>` 태그 등이 존재한다.
+
+[:arrow_heading_up:](#notebook_with_decorative_coverindex)
+
+---
+
+
 
 <br>
 
