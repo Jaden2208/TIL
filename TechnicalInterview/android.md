@@ -2,7 +2,10 @@
 
 ## :notebook_with_decorative_cover:Index
 
-- [안드로이드 4대 컴포넌트](#안드로이드-4대-컴포넌트)
+- [안드로이드 4대 컴포넌트](#안드로이드-4대-컴포넌트)  
+- [안드로이드의 실행환경(구조)](#안드로이드의-실행환경구조)  
+- [안드로이드 프로젝트 구성요소](#안드로이드-프로젝트-구성요소)  
+- [안드로이드에서 다국어 지원을 위해 해야할 작업](#안드로이드에서-다국어-지원을-위해-해야할-작업)
 
 <br>
 
@@ -73,3 +76,53 @@ Android OS로 부터 발생하는 각종 이벤트와 정보를 받아와 핸들
 - 데이터베이스에서 흔히 사용되는 CRUD 원칙을 준수한다.
 
 [:arrow_heading_up:](#안드로이드-4대-컴포넌트)
+
+---
+
+## 안드로이드의 실행환경(구조)
+
+![android_system_architecture](/images/android_system_architecture.png)
+> By Smieh - Anatomy Physiology of an Android, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=20067152
+
+안드로이드는 크게 4가지 실행환경으로 구성되어있다. 가장 하단부터 **리눅스 커널**, **라이브러리**, **어플리케이션 프레임워크**, **어플리케이션** 순서이다. **리눅스 커널** 은 OS로 안드로이드 스마트폰의 다양한 하드웨어(화면, 카메라, 블루투스, GPS, 메모리 등)를 관리한다. **라이브러리** 는 안드로이드에 있는 다양한 기능(UI 처리, 미디어 프레임워크, 데이터베이스 등)을 소프트웨어적으로 구현해 놓은 환경 뿐만 아니라 안드로이드 앱을 구동해주는 dalvik 가상머신과 코어 라이브러리까지 포함하는 영역이다. **어플리케이션 프레임워크** 는 사용자의 입력(액티비티, 윈도우, 컨텐츠, 뷰, 노티피케이션 등) 또는 특정한 이벤트에 따라 출력을 담당하는 환경을 말한다. 마지막으로 **어플리케이션** 은 실제로 동작하는 앱이 설치되는 환경을 의미한다.
+
+[:arrow_heading_up:](#notebook_with_decorative_coverindex)
+
+---
+
+## 안드로이드 프로젝트 구성요소
+
+- **libs**: 프로젝트에서 사용하는 다양한 라이브러리 소스가 저장되는 공간  
+- **androidTest**: 앱의 일부 코드를 테스트하기 위한 소스를 저장하는 공간  
+- **java**: 자바 또는 코틀린 코드를 저장하는 공간. 표준 자바와 동일하게 패키지를 이용한 하위 디렉토리 생성 방식을 사용한다.  
+- **res**: 리소스를 저장하는 공간  
+- **AndroidManifest.xml**: 앱에 대한 전체적인 정보를 담고있는 파일이다. 앱의 구성요소와 실행 권한 정보가 정의되어있다.  
+- **project > build.gradle**: 개발자가 직접 작성한 Gradle Build Script 파일  
+- **gradle > build.gradle**: 앱에 대한 컴파일 버전정보, 의존성 프로젝트에 대한 정의가 되어있는 파일
+
+[:arrow_heading_up:](#notebook_with_decorative_coverindex)
+
+---
+
+## 안드로이드에서 다국어 지원을 위해 해야할 작업
+
+다국어 지원을 위해서는 value resource file을 따로 생성해줘야 한다.
+
+```
+1. 'values' 에 'string.xml' 추가
+2. 이 때 `available qualifiers` 탭에서 locale 선택
+3. `language` 탭에서 언어 선택
+4. `specific region only`에서 세부 국가 선택
+```
+
+[:arrow_heading_up:](#notebook_with_decorative_coverindex)
+
+---
+
+<br>
+
+#### THANKS TO
+> ###### Reference
+> https://velog.io/@jojo_devstory/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-Android-4%EB%8C%80-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8
+> https://developer.android.com/guide/components/fundamentals#Components
+> https://github.com/devetude/Android-Interview-QnA
