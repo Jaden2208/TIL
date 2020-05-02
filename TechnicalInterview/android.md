@@ -164,6 +164,33 @@ Android OS로 부터 발생하는 각종 이벤트와 정보를 받아와 핸들
 
 안드로이드의 모든 앱은 백그라운드 실행 중에 메모리 부족 등으로 강제 종료될 수 있다. 이 때 앱을 다시 실행하면 `onCreate()` 메서드부터 호출된다.
 
+### 예시 질문
+
+**Q1) 메인 액티비티에서 하위 액티비티를 호출했을 때 라이프사이클이 호출되는 순서는?**
+
+**A)**
+
+```
+1. <MainActivity> onPause()
+2. <SubActivity> onCreate()
+3. <SubActivity> onStart()
+4. <SubActivity> onResume()
+5. <MainActivity> onStop()
+```
+
+**Q2) 하위 액티비티에서 메인 액티비티로 돌아갈 때 하위 액티비티 종료 후 라이프사이클이 호출되는 순서는?**
+
+**A)**
+
+```
+1. <SubActivity> onPause()
+2. <MainActivity> onRestart()
+3. <MainActivity> onStart()
+4. <MainActivity> onResume()
+5. <SubActivity> onStop()
+6. <SubActivity> onDestroy()
+```
+
 [:arrow_heading_up:](#notebook_with_decorative_coverindex)
 
 ---
