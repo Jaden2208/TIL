@@ -7,7 +7,8 @@
 - [안드로이드 프로젝트 구성요소](#안드로이드-프로젝트-구성요소)  
 - [안드로이드에서 다국어 지원을 위해 해야할 작업](#안드로이드에서-다국어-지원을-위해-해야할-작업)  
 - [Manifest 파일](#manifest-파일)  
-- [안드로이드 액티비티의 생명주기](#안드로이드-액티비티의-생명주기)
+- [안드로이드 액티비티의 생명주기](#안드로이드-액티비티의-생명주기)  
+- [MVC 아키텍쳐 패턴](#mvc-아키텍쳐-패턴)
 
 
 <br>
@@ -195,10 +196,55 @@ Android OS로 부터 발생하는 각종 이벤트와 정보를 받아와 핸들
 
 ---
 
+## MVC 아키텍쳐 패턴
+
+안드로이드와 관계없이 프로그래밍 시 가장 널리 사용되는 구조로 **Model, View, Control** 의 약자이다.
+
+![mvc_architecture](/images/mvc_architecture.png)
+
+**Model**
+
+- 데이터를 가지며 어플리케이션에서 사용되는 데이터와 그 데이터를 처리한다.  
+- **View** 또는 **Control** 에 묶이지 않아 재사용 가능하다.
+
+**View**
+
+- 사용자에게 보일 화면을 표현한다.  
+- 앱 및 UI와의 상호작용에서 컨트롤러와 통신한다.  
+- 유저가 어떤 입력을 하든 **View** 는 무엇을 해야할지 모른다.
+
+**Control**
+
+- 사용자로부터 입력을 받고 이 입력을 모델에 의해 View 정의를 하게 된다.  
+- 모델의 데이터 변화에 따라 뷰를 선택한다.
+
+
+![mvc_architecture_easy](/images/mvc_architecture_easy.png)
+
+### MVC의 장점
+
+- **Model** 과 **View** 가 서로 분리된다. (완전히는 x)  
+- 구현하기 가장 쉽고 단순하다.
+- 유닛테스트에서 **View** 는 테스트할 부분이 없기 때문에 쉽게 **Model** 만 테스트 가능하다.
+
+### MVC의 단점
+
+- **Model** 과 **View** 사이의 의존성을 아예 없앨 수 없다. 즉, **View** 의 UI 갱신을 위해 **Model** 을 직/간접적으로 참조하므로 앱 자체가 커지고 로직이 복잡해질수록 유지보수가 힘들어진다.  
+- 시간이 지날수록 **Control** 에 많은 코드가 쌓여 코드가 비대화하여 문제가 발생할 가능성이 있다.  
+
+[:arrow_heading_up:](#notebook_with_decorative_coverindex)
+
 <br>
 
+---
+
+
+
+---
+
 > ###### Reference
-> - https://velog.io/@jojo_devstory/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-Android-4%EB%8C%80-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8  
+> - https://velog.io/@jojo_devstory
 > - https://developer.android.com/guide/components/fundamentals#Components  
 > - https://github.com/devetude/Android-Interview-QnA  
 > - <오준석의 안드로이드 생존코딩 - 코틀린 편>
+> - https://medium.com/nspoons/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-architecture-%ED%8C%A8%ED%84%B4-part-1-%EB%AA%A8%EB%8D%B8-%EB%B7%B0-%EC%BB%A8%ED%8A%B8%EB%A1%A4%EB%9F%AC-model-view-controller-881c6fda24d9
