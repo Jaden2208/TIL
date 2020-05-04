@@ -7,11 +7,13 @@
 - [안드로이드 프로젝트 구성요소](#안드로이드-프로젝트-구성요소)  
 - [안드로이드에서 다국어 지원을 위해 해야할 작업](#안드로이드에서-다국어-지원을-위해-해야할-작업)  
 - [Manifest 파일](#manifest-파일)  
-- [안드로이드 액티비티의 생명주기](#안드로이드-액티비티의-생명주기)  
+- [Activity Lifecycle](#activity-lifecycle)  
+- [Fragment Lifecycle](#fragment-lifecycle)  
 - [MVC 아키텍쳐 패턴](#mvc-아키텍쳐-패턴)  
 - [MVP 아키텍쳐 패턴](#mvp-아키텍쳐-패턴)  
 - [MVVM 아키텍쳐 패턴](#mvvm-아키텍쳐-패턴)  
-- [비동기 처리와 Reactive Programming](#비동기-처리와-reactive-programming)
+- [비동기 처리와 Reactive Programming](#비동기-처리와-reactive-programming)  
+- [application과 context](#application과-context)
 
 <br>
 
@@ -141,7 +143,7 @@ Android OS로 부터 발생하는 각종 이벤트와 정보를 받아와 핸들
 
 ---
 
-## 안드로이드 액티비티의 생명주기
+## Activity Lifecycle
 
 액티비티에는 특정 시점에 호출되는 여러 메서드가 있다. 예를 들어 `onCreate()`는 생성 시점에 호출된다. 이렇게 특정한 타이밍에 호출되는 메서드를 '콜백 메서드'라고 한다.
 
@@ -193,6 +195,21 @@ Android OS로 부터 발생하는 각종 이벤트와 정보를 받아와 핸들
 5. <SubActivity> onStop()
 6. <SubActivity> onDestroy()
 ```
+
+[:arrow_heading_up:](#notebook_with_decorative_coverindex)
+
+---
+
+## Fragment Lifecycle
+
+![fragment_lifecycle](/images/fragment_lifecycle.png)
+
+액티비티가 생성되면 프레그먼트 매니저는 **초기화(initializing) 상태** 가 된다. 프레그먼트가 매니저에 의해 추가되면 `onAttach()`, `onAttachFragment()`, `onCreate()` 메소드가 차례로 실행된다.  
+액티비티의 `onCreate()` 메소드 호출 이후 매니저는 **생성(created)상태** 로 변경된다. 이 때 `onCreateView()`, `onViewCreated()`, `onActivityCreated()` 메소드가 차례로 호출된다.  
+다음으로 액티비티의 `onStart()` 메소드가 호출되면 매니저는 **시작(started) 상태** 로 `onStart()` 메소드를 호출한다.  
+이후 액티비티의 `onResume()` 메소드가 호출되면 매니저 역시 **재시작(resume 상태** 로 변하며 `onResume()` 메소드를 호출한다.
+
+그 외 액티비티가 화면에서 보이지 않을 경우 호출되는 `onStop()` 메소드 호출 이후 매니저는 **중지(stop) 상태** 가 되며 액티비티의 `onDestroy()` 메소드 호출 이후 매니저는 `onDestoyView()` 메소드를 호출한다.
 
 [:arrow_heading_up:](#notebook_with_decorative_coverindex)
 
@@ -379,11 +396,25 @@ AsynckTask는 전체적인 프로세스를 단순화하지만 **안드로이드�
 - 효율적으로 신속하게 비동기 처리를 도와줌  
 - 함수형 프로그래밍을 일부 지원함  
 - Observer pattern을 사용함  
-- Callback에서 또 Callback을 하는 Callback 지옥에서 벗어날 수 있음 (...?)
+- Callback에서 또 Callback을 하는 Callback 지옥에서 벗어날 수 있음
 
 이 있다.
 
 프로젝트에 적용도 해봤지만 아직도 어렵다.
+
+[:arrow_heading_up:](#notebook_with_decorative_coverindex)
+
+---
+
+## application과 context
+
+**application**
+
+어플리케이션 앱 프로세스가 실행되면 가장 먼저 생성되는 객체로 하나의 어플리케이션 객체는 하나의 앱 프로세스와 대응된다. 앱이 백그라운드로 내려가도 앱 프로세스는 계속 살아있기 때문에 어플리케이션 객체도 살아있다고 할 수 있다.
+
+**context**
+
+안드로이드 컴포넌트들이 동작하기 위해 필요한 정보를 담고 있는 객체를 말한다.
 
 [:arrow_heading_up:](#notebook_with_decorative_coverindex)
 
