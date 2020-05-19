@@ -25,4 +25,7 @@
 - [로그로 해시 키 값 추출하기](https://github.com/Jaden2208/TIL/blob/master/Android/get_hash_key_by_log.md)
 - [BootstrapMethodError: Exception from call site #0 bootstrap method 해결 방법](https://github.com/Jaden2208/TIL/blob/master/Android/bootstrapmethoderror.md)
 - [Toolbar 내부에 View를 넣을 때 원치 않는 패딩이 왼쪽에 있을 때?](https://github.com/Jaden2208/TIL/blob/master/Android/remove_tool_bar_padding.md)
-- [입력 양식에 맞게 입력됐는지 확인하는 법](https://github.com/Jaden2208/TIL/blob/master/Android/password_check_patterns.md)
+- [입력 양식에 맞게 입력됐는지 확인하는 법](https://github.com/Jaden2208/TIL/blob/master/Android/password_check_patterns.md)  
+- [let, apply, run, with](https://www.androidhuman.com/lecture/kotlin/2016/07/06/kotlin_let_apply_run_with/)  
+- [Kotlin의 주요 Class](https://thdev.tech/kotlin/2016/10/09/Kotlin-Class/)  
+- [[Git] Android Studio에서 다른 Branch 가져오기](https://tadoms.tistory.com/entry/Android-studio-git-branch-%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0)
